@@ -5,4 +5,4 @@ My 42library
 ```c
 #include "./includes/libft.h"
 ```
-It'll include with all libft functions including GNL and ft_printf  
+It'll include all libft functions including GNL and ft_printf  
