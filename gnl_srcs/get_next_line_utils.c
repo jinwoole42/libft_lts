@@ -6,13 +6,13 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:58:36 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/02/08 13:10:44 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/02/08 14:14:59 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen_g(char *s)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr_g(char *s, int c)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ char	*ft_strchr(char *s, int c)
 	if (s == 0)
 		return (0);
 	if (c == 0)
-		return ((char *)&s[ft_strlen(s)]);
+		return ((char *)&s[ft_strlen_g(s)]);
 	while (s[i] != 0)
 	{
 		if (s[i] == (char) c)
@@ -42,7 +42,7 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_g(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
@@ -50,8 +50,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		s1_len;
 	int		s2_len;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
+	s1_len = ft_strlen_g(s1);
+	s2_len = ft_strlen_g(s2);
 	str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (str == 0)
 		return (0);
@@ -111,7 +111,7 @@ char	*new_backup_str(char *backup_str)
 		free(backup_str);
 		return (0);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_strlen(backup_str) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen_g(backup_str) - i + 1));
 	if (str == 0)
 		return (0);
 	i++;

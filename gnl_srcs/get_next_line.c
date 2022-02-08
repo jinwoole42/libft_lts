@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:58:33 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/02/08 13:10:43 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/02/08 14:14:58 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*read_to_backup(int fd, char *backup_str)
 	if (buff == 0)
 		return (0);
 	rd_bytes = 1;
-	while (!ft_strchr(backup_str, '\n') && rd_bytes != 0)
+	while (!ft_strchr_g(backup_str, '\n') && rd_bytes != 0)
 	{
 		rd_bytes = read(fd, buff, BUFFER_SIZE);
 		if (rd_bytes == -1)
@@ -30,7 +30,7 @@ char	*read_to_backup(int fd, char *backup_str)
 			return (0);
 		}
 		buff[rd_bytes] = '\0';
-		backup_str = ft_strjoin(backup_str, buff);
+		backup_str = ft_strjoin_g(backup_str, buff);
 	}
 	free(buff);
 	return (backup_str);

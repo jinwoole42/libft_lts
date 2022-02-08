@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:57:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/02/08 13:41:31 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/02/08 14:19:38 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_list
 
 /*
 ** ------------------------------------------------------------------------------
-**                              Functions Prototypes
+**                              Function Prototypes
 */
 
 int		ft_isalnum(int c);
