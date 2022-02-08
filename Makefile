@@ -6,17 +6,18 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/02/08 13:06:03 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/02/08 13:17:11 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME	=	libft.a
 AR		=	ar rcs
 RM		=	rm -f
 CC		=	gcc
 CFLAGS	=	-Wall -Werror -Wextra
-
-NAME	=	libft.a
 FT_DIR	=	./libft_srcs/
+GNL_DIR	=	./gnl_srcs/
+PTF_DIR =	./printf_srcs/
 
 SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_isdigit.c \
@@ -60,10 +61,17 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_lstdelone.c \
 			$(FT_DIR)ft_lstclear.c \
 			$(FT_DIR)ft_lstiter.c \
-			$(FT_DIR)ft_lstmap.c
+			$(FT_DIR)ft_lstmap.c \
+			$(GNL_DIR)get_next_line.c \
+			$(GNL_DIR)get_next_line_utils.c \
+			$(PTF_DIR)ft_printf.c \
+			$(PTF_DIR)ft_put_csp.c \
+			$(PTF_DIR)ft_put_nbr.c \
+			$(PTF_DIR)ft_put_unsigned.c \
+			$(PTF_DIR)ft_put_x.c
 
 
-OBJS = $(SRCS:%.c=%.o) #$(SRCS_GNL:.c=.o) $(SRCS_PRINTF:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
