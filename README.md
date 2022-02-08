@@ -6,4 +6,5 @@ My 42library
 #include "./includes/libft.h"
 ```
 It'll include all libft functions including GNL and ft_printf  
-or not
+or not  
++norm check!
