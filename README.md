@@ -7,4 +7,4 @@ My 42library
 ```
 It'll include all libft functions including GNL and ft_printf  
 or not  
-+norm check!
++norm checked
