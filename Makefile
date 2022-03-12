@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/02/08 13:17:11 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/12 15:34:33 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,16 +73,34 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
+SHELL = /bin/bash
+sp    = /-\|/
+idx		=	0
+
 all: $(NAME)
 
+%.o		: %.c
+	$(eval idx = $(shell expr $(idx) + 1))
+	$(eval t_idx = $(shell expr $(idx) % 4 + 1))
+	$(eval chr = $(shell echo $(sp) | cut -c $(t_idx)))
+	@if [ $(idx) = 1 ]; then\
+		echo -n "Loading ... ";\
+	fi
+	@printf "\b$(chr)"
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
+	@echo '\n'
+	@echo -n "Library Complie Completed"
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
+	@echo -n "Object files are cleaned."
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo -n " And other things too!"
 
 re: fclean all
 
