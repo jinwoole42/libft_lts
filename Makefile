@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/12 15:34:33 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/13 13:56:59 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ all: $(NAME)
 	$(eval t_idx = $(shell expr $(idx) % 4 + 1))
 	$(eval chr = $(shell echo $(sp) | cut -c $(t_idx)))
 	@if [ $(idx) = 1 ]; then\
-		echo -n "Loading ... ";\
+		echo -n "Making library ... ";\
 	fi
 	@printf "\b$(chr)"
 	@$(CC) $(CFLAGS) -c $< -o $@
