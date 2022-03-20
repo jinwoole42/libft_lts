@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:57:40 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/02/08 14:19:38 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/03/20 10:02:37 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_lstprintf(t_list *lst);
 
 #endif
