@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/20 11:52:52 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/20 15:47:54 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,8 +62,8 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_lstclear.c \
 			$(FT_DIR)ft_lstiter.c \
 			$(FT_DIR)ft_lstmap.c \
-			$(FT_DIR)ft_lstprintf.c \
-			$(FT_DIR)ft_lstselete.c \
+			$(FT_DIR)ft_lstprint.c \
+			$(FT_DIR)ft_lstselect.c \
 			$(GNL_DIR)get_next_line.c \
 			$(GNL_DIR)get_next_line_utils.c \
 			$(PTF_DIR)ft_printf.c \
