@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 13:10:04 by jinwoole          #+#    #+#             */
-/*   Updated: 2021/12/15 15:42:21 by jinwoole         ###   ########.fr       */
+/*   Created: 2021/12/08 12:55:10 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/20 15:54:38 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*result;
-	t_list	*tmp;
-
 	if (lst == 0 || f == 0)
-		return (0);
-	result = 0;
+		return ;
 	while (lst)
 	{
-		tmp = ft_lstnew((*f)(lst->content));
-		if (tmp == 0)
-		{
-			ft_lstclear(&result, del);
-			return (0);
-		}
-		ft_lstadd_back(&result, tmp);
-		tmp = tmp->next;
+		f(lst->content);
 		lst = lst->next;
 	}
-	return (result);
 }

@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/20 15:47:54 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/20 15:53:14 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS	=	-Wall -Werror -Wextra
 FT_DIR	=	./libft_srcs/
 GNL_DIR	=	./gnl_srcs/
 PTF_DIR =	./printf_srcs/
+LST_DIR = 	./lst_srcs/
 
 SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_isdigit.c \
@@ -53,17 +54,17 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_putstr_fd.c \
 			$(FT_DIR)ft_putendl_fd.c \
 			$(FT_DIR)ft_putnbr_fd.c \
-			$(FT_DIR)ft_lstnew.c \
-			$(FT_DIR)ft_lstadd_front.c \
-			$(FT_DIR)ft_lstsize.c \
-			$(FT_DIR)ft_lstlast.c \
-			$(FT_DIR)ft_lstadd_back.c \
-			$(FT_DIR)ft_lstdelone.c \
-			$(FT_DIR)ft_lstclear.c \
-			$(FT_DIR)ft_lstiter.c \
-			$(FT_DIR)ft_lstmap.c \
-			$(FT_DIR)ft_lstprint.c \
-			$(FT_DIR)ft_lstselect.c \
+			$(LST_DIR)ft_lstnew.c \
+			$(LST_DIR)ft_lstadd_front.c \
+			$(LST_DIR)ft_lstsize.c \
+			$(LST_DIR)ft_lstlast.c \
+			$(LST_DIR)ft_lstadd_back.c \
+			$(LST_DIR)ft_lstdelone.c \
+			$(LST_DIR)ft_lstclear.c \
+			$(LST_DIR)ft_lstiter.c \
+			$(LST_DIR)ft_lstmap.c \
+			$(LST_DIR)ft_lstprint.c \
+			$(LST_DIR)ft_lstselect.c \
 			$(GNL_DIR)get_next_line.c \
 			$(GNL_DIR)get_next_line_utils.c \
 			$(PTF_DIR)ft_printf.c \

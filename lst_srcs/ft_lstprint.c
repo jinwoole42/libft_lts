@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 10:03:36 by jinwoole          #+#    #+#             */
-/*   Updated: 2021/12/16 12:08:29 by jinwoole         ###   ########.fr       */
+/*   Created: 2022/03/20 09:09:38 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/20 15:54:35 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstprintf(t_list *lst)
 {
-	if (lst == 0 || new == 0)
+	if (lst == 0)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	while (lst)
+	{
+		ft_printf("%d ", lst->content);
+		lst = lst->next;
+	}
 }

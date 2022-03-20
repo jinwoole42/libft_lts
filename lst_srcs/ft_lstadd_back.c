@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstselete.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 11:41:56 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/03/20 15:47:02 by jinwoole         ###   ########.fr       */
+/*   Created: 2021/12/08 11:03:53 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/20 15:54:42 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_list	*ft_lstselect(t_list *lst, size_t index)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	lstsize;
+	t_list	*tmp;
 
-	lstsize = ft_lstsize(lst);
-	if (index >= lstsize)
+	if (lst == 0 || new == 0)
+		return ;
+	if (*lst == 0)
 	{
-		ft_printf("<ft_lstselect : Max index is %d. rtn [0]>", lstsize - 1);
-		write(1, "\n", 1);
-		return (lst);
+		*lst = new;
+		return ;
 	}
-	while (index)
-	{
-		lst = lst->next;
-		index--;
-	}
-	return (lst);
+	tmp = ft_lstlast(*lst);
+	tmp->next = new;
 }

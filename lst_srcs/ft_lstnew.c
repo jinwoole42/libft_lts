@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 12:55:10 by jinwoole          #+#    #+#             */
-/*   Updated: 2021/12/08 12:57:02 by jinwoole         ###   ########.fr       */
+/*   Created: 2021/12/08 09:21:47 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/20 15:55:27 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+t_list	*ft_lstnew(void *content)
 {
-	if (lst == 0 || f == 0)
-		return ;
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
+	t_list	*lst_new;
+
+	lst_new = (t_list *)malloc(sizeof(t_list));
+	if (lst_new == 0)
+		return (0);
+	lst_new->content = content;
+	lst_new->next = 0;
+	return (lst_new);
 }
