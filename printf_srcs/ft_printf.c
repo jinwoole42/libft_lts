@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 10:32:29 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/02/04 11:51:30 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/03/21 19:38:49 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			print_length += specify_format(ap, str[i + 1]);
+			i++;
+		}
+		else if (str[i] == '\\' && str[i + 1] == 'n')
+		{
+			write(1, "\n", 1);
 			i++;
 		}
 		else
