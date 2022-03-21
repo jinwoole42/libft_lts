@@ -1,7 +1,7 @@
 # libft_lts
 My 42library
 
-### When using...
+### 사용
 ```c
 #include "./includes/libft.h"
 ```
