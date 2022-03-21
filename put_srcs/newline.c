@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   newline.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 19:12:47 by jinwoole          #+#    #+#             */
-/*   Updated: 2021/12/15 13:43:10 by jinwoole         ###   ########.fr       */
+/*   Created: 2022/03/21 10:05:12 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/21 19:06:08 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	newline(void)
 {
-	write(fd, &c, 1);
+	write(1, "\n", 1);
 }

@@ -6,11 +6,11 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 20:03:31 by jinwoole          #+#    #+#             */
-/*   Updated: 2021/12/10 13:51:09 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/03/21 19:06:07 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

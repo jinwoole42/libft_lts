@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/20 17:20:40 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/21 19:05:41 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ FT_DIR	=	./libft_srcs/
 GNL_DIR	=	./gnl_srcs/
 PTF_DIR =	./printf_srcs/
 LST_DIR = 	./lst_srcs/
+PUT_DIR =	./put_srcs/
 
 SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_isdigit.c \
@@ -50,10 +51,11 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(FT_DIR)ft_itoa.c \
 			$(FT_DIR)ft_strmapi.c \
 			$(FT_DIR)ft_striteri.c \
-			$(FT_DIR)ft_putchar_fd.c \
-			$(FT_DIR)ft_putstr_fd.c \
-			$(FT_DIR)ft_putendl_fd.c \
-			$(FT_DIR)ft_putnbr_fd.c \
+			$(PUT_DIR)ft_putchar_fd.c \
+			$(PUT_DIR)ft_putstr_fd.c \
+			$(PUT_DIR)ft_putendl_fd.c \
+			$(PUT_DIR)ft_putnbr_fd.c \
+			$(PUT_DIR)newline.c \
 			$(LST_DIR)ft_lstnew.c \
 			$(LST_DIR)ft_lstadd_front.c \
 			$(LST_DIR)ft_lstsize.c \
