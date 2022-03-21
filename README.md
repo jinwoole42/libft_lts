@@ -2,6 +2,9 @@
 My 42library
 
 ### 사용
+1. 클론
+2. setting_libft 실행
+3. 프로젝트 헤더에 libft헤더 포함
 ```c
 #include "./includes/libft.h"
 ```
