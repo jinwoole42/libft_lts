@@ -6,7 +6,7 @@
 #    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/21 19:05:41 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/21 22:22:06 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,15 +92,14 @@ all: $(NAME)
 	$(eval t_idx = $(shell expr $(idx) % 4 + 1))
 	$(eval chr = $(shell echo $(sp) | cut -c $(t_idx)))
 	@if [ $(idx) = 1 ]; then\
-		echo -n "Making library ... ";\
+		echo -n "Compiling library ... "; \
 	fi
 	@printf "\b$(chr)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo '\n'
-	@echo -n "Library Complie Completed"
+	@echo -e "\n<Library Complie Completed>"
 
 clean:
 	@$(RM) $(OBJS)
@@ -108,7 +107,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo -n " And other things too!"
+	@echo -en " And other things too!\n"
 
 re: fclean all
 
