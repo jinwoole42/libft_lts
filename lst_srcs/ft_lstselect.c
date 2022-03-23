@@ -17,9 +17,9 @@ t_list	*ft_lstselect(t_list *lst, size_t index)
 	size_t	lstsize;
 
 	lstsize = ft_lstsize(lst);
-	if (index >= lstsize)
+	if (index > lstsize)
 	{
-		ft_printf("<ft_lstselect : Max index is %d. rtn [0]>", lstsize - 1);
+		ft_printf("<ft_lstselect : Max index is %d. rtn [0]>", lstsize);
 		write(1, "\n", 1);
 		return (lst);
 	}
