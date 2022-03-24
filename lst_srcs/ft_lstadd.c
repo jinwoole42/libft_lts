@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstselect.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jinwoole <jinwoole@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 11:41:56 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/03/24 14:52:02 by jinwoole         ###   ########.fr       */
+/*   Created: 2022/03/24 14:01:50 by jinwoole          #+#    #+#             */
+/*   Updated: 2022/03/24 14:49:54 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_list	*ft_lstselect(t_list *lst, int index)
+void	ft_lstadd(t_list *lst, t_list *new, int index)
 {
-	int	lstsize;
+	int		lstsize;
+	t_list	*element;
 
 	lstsize = ft_lstsize(lst);
-	if (index == 0)
+	if (lst == 0 || new == 0)
+		return ;
+	if (index > lstsize + 1)
 	{
-		ft_printf("%s\n", "Index starts at 1, rtn [0]");
-		return (lst);
+		ft_printf("<ft_lstadd : index too  big! Max is %d.>\n", lstsize + 1);
+		free(new);
+		return ;
 	}
-	if (index > lstsize)
+	if (index <= 0)
 	{
-		ft_printf("<ft_lstselect : Max index is %d. rtn [0]>", lstsize);
-		write(1, "\n", 1);
-		return (lst);
+		ft_printf("%s\n", "Index starts at 1, check github");
+		free(new);
+		return ;
 	}
-	while (index)
-	{
-		lst = lst->next;
-		index--;
-	}
-	return (lst);
+	element = ft_lstselect(lst, index - 1);
+	new->next = element->next;
+	element->next = new;
 }

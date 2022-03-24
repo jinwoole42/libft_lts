@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
+#    By: jinwoole <jinwoole@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/21 22:22:06 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/24 14:15:19 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(LST_DIR)ft_lstfree.c \
 			$(LST_DIR)ft_lstdel_next.c \
 			$(LST_DIR)ft_lstadd_next.c \
+			$(LST_DIR)ft_lstadd.c \
 			$(GNL_DIR)get_next_line.c \
 			$(GNL_DIR)get_next_line_utils.c \
 			$(PTF_DIR)ft_printf.c \
@@ -92,14 +93,15 @@ all: $(NAME)
 	$(eval t_idx = $(shell expr $(idx) % 4 + 1))
 	$(eval chr = $(shell echo $(sp) | cut -c $(t_idx)))
 	@if [ $(idx) = 1 ]; then\
-		echo -n "Compiling library ... "; \
+		echo -n "Making library ... ";\
 	fi
 	@printf "\b$(chr)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo -e "\n<Library Complie Completed>"
+	@echo '\n'
+	@echo -n "Library Complie Completed"
 
 clean:
 	@$(RM) $(OBJS)
@@ -107,7 +109,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo -en " And other things too!\n"
+	@echo -n " And other things too!"
 
 re: fclean all
 
