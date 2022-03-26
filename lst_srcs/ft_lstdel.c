@@ -6,7 +6,7 @@
 /*   By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 17:19:38 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/03/26 13:17:43 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/03/26 16:27:17 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	ft_lstdel_next(t_list *lst)
 	if (lst == 0)
 		return ;
 	lst->next = target_node->next;
+	target_node->content = NULL;
 	free(target_node);
 }
 
