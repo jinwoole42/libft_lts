@@ -6,7 +6,7 @@
 /*   By: jinwoole <jinwoole@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 11:41:56 by jinwoole          #+#    #+#             */
-/*   Updated: 2022/03/24 14:52:02 by jinwoole         ###   ########.fr       */
+/*   Updated: 2022/03/24 17:39:10 by jinwoole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_list	*ft_lstselect(t_list *lst, int index)
 	int	lstsize;
 
 	lstsize = ft_lstsize(lst);
-	if (index == 0)
+	if (index < 0)
 	{
-		ft_printf("%s\n", "Index starts at 1, rtn [0]");
+		ft_printf("%s\n", "Index cannot be -, rtn [0]");
 		return (lst);
 	}
 	if (index > lstsize)

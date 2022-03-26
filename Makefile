@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jinwoole <jinwoole@student.42.fr>          +#+  +:+       +#+         #
+#    By: jinwoole <indibooks@naver.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 14:55:05 by jinwoole          #+#    #+#              #
-#    Updated: 2022/03/24 14:15:19 by jinwoole         ###   ########.fr        #
+#    Updated: 2022/03/26 13:17:15 by jinwoole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,9 +68,8 @@ SRCS	=	$(FT_DIR)ft_isalpha.c \
 			$(LST_DIR)ft_lstprint.c \
 			$(LST_DIR)ft_lstselect.c \
 			$(LST_DIR)ft_lstfree.c \
-			$(LST_DIR)ft_lstdel_next.c \
-			$(LST_DIR)ft_lstadd_next.c \
 			$(LST_DIR)ft_lstadd.c \
+			$(LST_DIR)ft_lstdel.c \
 			$(GNL_DIR)get_next_line.c \
 			$(GNL_DIR)get_next_line_utils.c \
 			$(PTF_DIR)ft_printf.c \
